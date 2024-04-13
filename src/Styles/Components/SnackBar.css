@@ -1,0 +1,27 @@
+.snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 999;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+.snackbar.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.snackbar.success {
+  background-color: #4caf50; /* Green */
+}
+
+.snackbar.failure {
+  background-color: #f44336; /* Red */
+}
