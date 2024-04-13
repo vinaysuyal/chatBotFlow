@@ -2,7 +2,7 @@ import React from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-const MessageSettingsPanel = ({ onClose, onTextChange, onDelete }) => {
+const MessageSettingsPanel = ({ onClose, onTextChange, onDelete, message }) => {
   return (
     <div className="message-settings-panel">
       <div className="panel-header">
@@ -19,6 +19,7 @@ const MessageSettingsPanel = ({ onClose, onTextChange, onDelete }) => {
           onChange={(e) => onTextChange(e.target.value)}
           style={{ width: "90%" }}
           cols={20}
+          value={message || ""}
           type="text"
           id="message-input"
         />
