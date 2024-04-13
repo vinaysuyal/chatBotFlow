@@ -146,6 +146,10 @@ const FlowCreator = () => {
           <SideBar>
             {activeNodeSettingPanel.type === "messageNode" && (
               <MessageSettingsPanel
+                message={
+                  nodes.find((node) => node.id == activeNodeSettingPanel.id)
+                    .data.text
+                }
                 onDelete={() => {
                   setNodes((prevNodes) => {
                     const newNodes = prevNodes.filter(
